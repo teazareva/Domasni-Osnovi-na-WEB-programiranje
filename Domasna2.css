@@ -1,0 +1,75 @@
+ body {
+    background-image: url(tt.jpg);
+    background-repeat: no-repeat;
+    font-family: 'Segoe UI', sans-serif;
+    color: black;
+    margin: 40px;
+} 
+
+h1 {
+    text-align: center;
+    color: #004aad;
+    margin-bottom: 30px;
+    text-shadow: -1px 1px 3px #007aad;
+   animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+p {
+    font-weight: bold;
+    margin-top: 20px;
+    color: black;
+}
+
+input {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+em {
+    font-family:"Comic Sans MS", "Segoe Script", cursive;
+    font-weight: bold; color: white ;
+}
+p em 
+{
+    font-family:"Comic Sans MS", "Segoe Script", cursive;
+    font-weight: bold; color:black; text-decoration: underline ;
+}
+input:hover {
+  background-color: #007aad;
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.poraka {
+  position: fixed;    
+  bottom: 20px;        
+  right: 20px;          
+  background-color: white;  
+  color: #007aad;              
+  padding: 10px 20px;        
+  border-radius: 15px;        
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+  font-family: 'Dancing Script', cursive; 
+}
+
+.kviz-box {
+  background-color: white;            
+  border-radius: 15px;               
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+  padding: 10px;                    
+  margin-bottom: 20px; 
+  width: fit-content;              
+}
+
+li p 
+{
+  color:black;
+}
