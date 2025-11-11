@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8"> 
+  <title> City of Prague - Official Site</title>
+  <link rel="stylesheet" type="text/css" href="vienna.css">
+</head>
+
+<body>
+ <div class="header">
+    <a href="#feedback">Feedback</a>
+    <a href="#aout">About</a>
+    <a href="https://www.google.com/maps/place/Vienna,+Austria/">Location</a>
+    <a href="galerija.html">Moments</a>
+    <a href="blog.html">See&Do</a>
+    <a class="active" href="vienna.html">Welcome</a>
+</div>
+
+<div id="feedback" style="text-align:center; margin-top:50px;">
+  <h2>We value your feedback!</h2>
+  <p>How satisfied are you with the information on our website?</p>
+
+  <form id="feedbackForm" style="display:inline-block; text-align:left; background-color: whitesmoke; padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+    
+
+    <label><b>Rate your satisfaction:</b></label><br>
+    <input type="radio" name="rating" value="1"> 1 - Very dissatisfied<br>
+    <input type="radio" name="rating" value="2"> 2 - Dissatisfied<br>
+    <input type="radio" name="rating" value="3"> 3 - Neutral<br>
+    <input type="radio" name="rating" value="4"> 4 - Satisfied<br>
+    <input type="radio" name="rating" value="5"> 5 - Very satisfied<br><br>
+
+ 
+    <label><b>What should be improved on our website?</b></label><br>
+    <input type="checkbox" name="improve" value="design"> Design/Layout<br>
+    <input type="checkbox" name="improve" value="content"> More detailed information<br>
+    <input type="checkbox" name="improve" value="photos"> Better quality photos<br>
+    <input type="checkbox" name="improve" value="navigation"> Easier navigation<br>
+    <input type="checkbox" name="improve" value="speed"> Page loading speed<br><br>
+
+   
+    <label for="comment"><b>Your thoughts or suggestions:</b></label><br>
+    <textarea id="comment" name="comment" rows="4" cols="40" placeholder="Write your opinion here..."></textarea><br><br>
+
+    <button type="submit" style="background-color: #3971cada; color:white; padding:8px 16px; border:none; border-radius:5px; cursor:pointer;">Submit</button>
+  </form>
+</div>
+<div id="thankYouToast" style="
+  display:none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+">Thank you for your feedback!</div>
+
+<script>
+  const form = document.getElementById("feedbackForm");
+  const toast = document.getElementById("thankYouToast");
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    form.reset();
+
+  
+    toast.style.display = "block";
+    setTimeout(() => { toast.style.opacity = "1"; }, 50);
+
+    setTimeout(() => {
+      toast.style.opacity = "0";
+      setTimeout(() => { toast.style.display = "none"; }, 500);
+    }, 4000);
+  });
+</script>
+
+</body>
+</html>

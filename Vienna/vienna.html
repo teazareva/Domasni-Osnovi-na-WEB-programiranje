@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8"> 
+  <title> City of Vienna - Official Site</title>
+  <link rel="stylesheet" type="text/css" href="vienna.css">
+   
+  </script>
+
+</head>
+
+<body>
+ <div class="header">
+    <a href="feedback.html">Feedback</a>
+    <a href="https://www.google.com/maps/place/Vienna,+Austria/">Location</a>
+      <a href="galerija.html">Moments</a>
+      <a href="blog.html">See&Do</a>
+      
+  <a class="active" href="vienna.html">Welcome</a>
+</div>
+
+
+ <section class="hero">
+  <div class="overlay">
+    <h1>
+        <img src="2.png" alt="Лого" style="width: 60px; vertical-align:middle;">
+        Welcome to Vienna — the Heart of Europe!</h1>
+    <p>Discover the city where imperial palaces meet vibrant modern culture and every corner tells a story.<br>
+Explore the grand museums, stroll through elegant streets, and let Vienna captivate you with its charm.<span id="dots">.</span><span id="more">
+       <br>Vienna is a stunning city nestled along the Danube River, blending historic grandeur with contemporary flair.<br>
+From majestic palaces like Schönbrunn and the Hofburg to world-class art galleries and music halls, the city is a treasure trove for culture lovers. <br>
+Visitors can enjoy leisurely walks through lush gardens, sip coffee in traditional Viennese cafés, or immerse themselves in classical music at the opera.<br>
+Experience Vienna — where history, art, and modern life come together in perfect harmony.
+      </span><span id="readBtn" onclick="toggleReadMore()" style="color: white; font-style: oblique; text-decoration:underline;font-weight: normal;">
+    Read more
+  </span></p>
+      <section style="text-align:center; margin-top:50px;">
+  <h2>Log In</h2>
+  <form id="loginForm" onsubmit="return validateLogin()" style="display:inline-block; text-align:left; background-color:rgba(255,255,255,0.9); padding:20px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.2);">
+    
+    <label for="email" style="color:grey;"><b>Email:</b></label><br>
+    <input type="email" id="email" name="email" placeholder="Enter your email" 
+           style="width:250px; padding:8px; margin:5px 0; border:1px solid #ccc; border-radius:5px; color:black"><br>
+
+    <label for="password" style="color: grey;"><b>Password:</b></label><br>
+    <input type="password" id="password" name="password" placeholder="Enter your password"
+           style="width:250px; padding:8px; margin:5px 0; border:1px solid #ccc; border-radius:5px; color: black;"><br>
+
+    <button type="submit" 
+            style="background-color:#3971ca; color:white; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; width:100%;">
+      Log In
+    </button>
+  </form>
+</section>
+
+<script>
+function validateLogin() {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (email === "" || password === "") {
+    alert("Please enter both email and password.");
+    return false;
+  } else {
+    window.location.href = "vienna1.html";
+    return false; 
+  }
+}
+</script>
+  </div>
+</section>
+
+<script src="vienna.js"></script>
+
+
+<footer>
+    <div class="text">
+  <p>© My Website. All rights reserved.</p>
+</div>
+</footer>
+</body>
+</html>
