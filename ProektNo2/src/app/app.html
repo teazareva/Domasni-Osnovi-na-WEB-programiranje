@@ -1,0 +1,16 @@
+<h1 class="title">МЕМОРИЈА КВИЗ</h1>
+
+<div id="gameBoard">
+  <div class="board">
+  <div
+    class="card"
+    *ngFor="let card of cards"
+     (click)="flipCard(card)"
+    [class.flipped]="card.flipped || card.matched"
+   
+  >
+    <img [src]="'images/' + card.image" />
+  </div>
+</div>
+</div>
+<h2>Обиди: {{ tries }}</h2>
