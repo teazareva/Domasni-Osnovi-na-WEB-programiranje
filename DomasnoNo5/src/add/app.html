@@ -1,0 +1,11 @@
+<h1>MotoGP Riders Dashboard</h1>
+<p><i>MotoGP 2025 – Riders performance and championship points</i></p>
+
+<div class="grid">
+  <div class="card" *ngFor="let rider of riders">
+    <img [src]="'images/' + rider.image" alt="{{ rider.name }}">
+    <h3>{{ rider.name }}</h3>
+    <p>{{ rider.team }}</p>
+    <p>Points: {{ rider.points }}</p>
+  </div>
+</div>
